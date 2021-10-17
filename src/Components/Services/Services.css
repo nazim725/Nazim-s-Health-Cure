@@ -1,0 +1,20 @@
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.services-container img{
+    padding: 10px;
+}
+
+@media screen and (max-width:768px){
+
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+       
+    }
+}

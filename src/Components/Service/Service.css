@@ -1,0 +1,20 @@
+.service-card{
+    width: 300px;
+    height: 450px;
+}
+.service-img{
+    width: 300px;
+    height: 300px;
+}
+
+@media screen and (max-width:768px){
+    .service-card{
+        width: 360px;
+        height: 450px;
+    }
+    .service-img{
+        width: 350px;
+        height: 300px;
+    }
+    
+}
