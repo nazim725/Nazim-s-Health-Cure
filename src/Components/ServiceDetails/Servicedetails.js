@@ -18,6 +18,7 @@ const Servicedetails = () => {
             
             <Card className="mx-auto service-details">
             <Card.Body>
+                <img src={service.img} alt="" className="service-details-img" />
                 <Card.Title>{service.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{service.subtitle}</Card.Subtitle>
                 <Card.Text>

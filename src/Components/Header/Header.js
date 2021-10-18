@@ -13,7 +13,7 @@ const Header = () => {
              <>
         <Navbar bg="dark" variant="dark" sticky="top"  collapseOnSelect expand="lg">
           <Container>
-          <Navbar.Brand href="#home">Nazim's Health Cure</Navbar.Brand>
+          <Navbar.Brand as={HashLink} to="/home#home">Nazim's Health Cure</Navbar.Brand>
           <Navbar.Toggle className="toggle"/>
           <Navbar.Collapse className="justify-content-end">
           <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>

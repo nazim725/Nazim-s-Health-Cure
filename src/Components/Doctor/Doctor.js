@@ -16,8 +16,8 @@ const Doctor = (props) => {
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
                          <h4>{Designation}</h4> 
-                         <p> ${fee}</p>
-                         <Link to={`doctorDetails/${id}`}><button className="btn btn-warning">See More</button></Link>
+                         <p className="text-warning fw-bold"> ${fee}</p>
+                         <Link to={`doctorDetails/${id}`}><button className="btn btn-warning fw-bold">See More <i class="fas fa-long-arrow-alt-right"></i></button></Link>
                         </Card.Text>
                         </Card.Body>
                     </Card>

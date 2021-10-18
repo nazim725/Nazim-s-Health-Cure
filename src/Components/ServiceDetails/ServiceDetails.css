@@ -4,9 +4,17 @@
     padding: 10px;
 }
 
+.service-details-img{
+    width: 500px;
+}
+
 @media screen  and (max-width:768px){
     .service-details{
         width: 100%;
+    }
+
+    .service-details-img{
+        width: 310px;
     }
     
 }

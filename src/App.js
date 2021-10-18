@@ -15,6 +15,7 @@ import AuthProvider from './Context/AuthProvider';
 import Footer from './Components/Footer/Footer';
 import Ambulance from './Components/Ambulance/Ambulance';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotFound from './Components/NotFound/NotFound';
 
 
 function App() {
@@ -60,6 +61,10 @@ function App() {
           <Route path='/ambulance'>
             <Ambulance></Ambulance>
           </Route>
+
+          <Router path='*'>
+            <NotFound></NotFound>
+          </Router>
 
           
 

@@ -17,7 +17,7 @@ const Service = (props) => {
                         <Card.Text>
                          <h4>{subtitle}</h4> 
                          <p> ${price}</p>
-                         <Link to={`serviceDetails/${id}`}><button className="btn btn-warning">See More</button></Link>
+                         <Link to={`serviceDetails/${id}`}><button className="btn btn-warning">See More <i class="fas fa-long-arrow-alt-right"></i></button></Link>
                         </Card.Text>
                         </Card.Body>
                     </Card>
