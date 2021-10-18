@@ -9,12 +9,17 @@ import Servicedetails from './Components/ServiceDetails/Servicedetails';
 import Doctors from './Components/Doctors/Doctors';
 import DoctorDetails from './Components/DoctorDetails/DoctorDetails';
 import About from './Components/About/About';
+import Register from './Components/Registration/Register';
+import Login from './Components/Login/Login';
+import AuthProvider from './Context/AuthProvider';
 
 
 function App() {
   return (
     <div>
-      <Router>
+     
+     <AuthProvider>
+     <Router>
        <Header></Header>
         <Switch>
           <Route exact path='/'>
@@ -41,10 +46,19 @@ function App() {
           <Route path='/about'>
             <About></About>
           </Route>
+          <Route path='/register'>
+            <Register></Register>
+          </Route>
+
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
 
         </Switch>
       </Router>
+     </AuthProvider>
      
+  
      
     </div>
   );
