@@ -1,6 +1,6 @@
 # Nazim's Health Cure and Diagnostic Center
 
-[Create React App](https://nazim-s-health-cure.web.app/).
+[Nazim's Health Cure and Diagnostic Center](https://nazim-s-health-cure.web.app/).
 
 ## Description
 
