@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { GoogleAuthProvider, getAuth, signInWithPopup,onAuthStateChanged,signOut    } from "firebase/auth";
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail} from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication()
 
 
-const googleprovider = new GoogleAuthProvider();
+
 
 
 
@@ -98,8 +98,9 @@ const useFirebase=()=>{
        }
 
        const signInUsingGoogle=()=>{
+        const googleProvider = new GoogleAuthProvider();
         setIsLoading(true)
-      return  signInWithPopup(auth,googleprovider)
+      return  signInWithPopup(auth,googleProvider)
         
     }
 

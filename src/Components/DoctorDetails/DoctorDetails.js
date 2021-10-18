@@ -27,7 +27,7 @@ const DoctorDetails = () => {
                     <p>{doctor.description}</p>
                     <p>Consultation Fee: ${doctor.fee}</p>
 
-                    <button className='btn btn-success'>Appoint Doctor</button>
+                    <button className='btn btn-success'>Appoint {doctor.name}</button>
 
                 </div>
             </div>

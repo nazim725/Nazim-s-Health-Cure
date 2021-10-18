@@ -7,3 +7,16 @@
     width: 300px;
     padding: 15px;
 }
+@media screen and (max-width:768px) {
+    .doctor-card{
+        width: 330px;
+        height: 550px;
+    }
+    .doctor-img{
+        height: 300px;
+        width: 330px;
+        padding: 10px;
+    }
+
+    
+}

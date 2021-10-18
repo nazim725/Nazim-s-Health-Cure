@@ -12,6 +12,9 @@ import About from './Components/About/About';
 import Register from './Components/Registration/Register';
 import Login from './Components/Login/Login';
 import AuthProvider from './Context/AuthProvider';
+import Footer from './Components/Footer/Footer';
+import Ambulance from './Components/Ambulance/Ambulance';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -31,17 +34,17 @@ function App() {
           <Route path='/services'>
             <Services></Services>
           </Route>
-          <Route path='/serviceDetails/:serviceId'>
+          <PrivateRoute path='/serviceDetails/:serviceId'>
             <Servicedetails></Servicedetails>
-          </Route>
+          </PrivateRoute>
 
           <Route path='/doctors'>
             <Doctors></Doctors>
           </Route>
 
-          <Route path='/doctorDetails/:doctorId'>
+          <PrivateRoute path='/doctorDetails/:doctorId'>
             <DoctorDetails></DoctorDetails>
-          </Route>
+          </PrivateRoute>
 
           <Route path='/about'>
             <About></About>
@@ -54,7 +57,14 @@ function App() {
             <Login></Login>
           </Route>
 
+          <Route path='/ambulance'>
+            <Ambulance></Ambulance>
+          </Route>
+
+          
+
         </Switch>
+        <Footer></Footer>
       </Router>
      </AuthProvider>
      

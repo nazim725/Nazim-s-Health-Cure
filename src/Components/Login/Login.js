@@ -1,11 +1,27 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
+import { useHistory,useLocation } from "react-router-dom";
+
 
 const Login = () => {
-    const {handleLogin,handleEmailChange,handlePasswordChange,handleGoogleSignIn,error}=useAuth()
+    const {handleLogin,handleEmailChange,handlePasswordChange,signInUsingGoogle,error}=useAuth()
+     
+    const history=useHistory();
+    const location=useLocation()
+    const redirect=location.state?.from || '/home'
+
+    const handleGoogleLogin=()=>{
+        signInUsingGoogle()
+        .then((result) => {
+            const user=result.user;
+            console.log(user)
+           history.push(redirect)
+           })
+           
+    }
+
     return (
         <div className="mx-5">
 
@@ -31,7 +47,7 @@ const Login = () => {
                 <br />
               
 
-                <Button className="mt-3 mx-auto" onClick={handleGoogleSignIn}>Google Sign In </Button>
+                <Button className="mt-3 mx-auto" onClick={handleGoogleLogin}>Google Sign In </Button>
                 </Form>
 
                 <p>New to Nazim's Health Cure? <Link className='text-decoration-none' to='/register'>Create Account</Link></p>

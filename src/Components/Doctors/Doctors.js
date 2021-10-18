@@ -12,7 +12,7 @@ const Doctors = () => {
 
     },[])
     return (
-        <div className="doctors-container mt-5 pb-5">
+        <div className="doctors-container mt-5 pb-5" id='doctors'>
             {
                 doctors.map(doctor=><Doctor
                     key={doctor.id}

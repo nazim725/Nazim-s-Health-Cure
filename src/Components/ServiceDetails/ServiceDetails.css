@@ -1,0 +1,12 @@
+
+.service-details{
+    width: 50%;
+    padding: 10px;
+}
+
+@media screen  and (max-width:768px){
+    .service-details{
+        width: 100%;
+    }
+    
+}

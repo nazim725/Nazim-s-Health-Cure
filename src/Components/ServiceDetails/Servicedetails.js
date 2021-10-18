@@ -14,9 +14,9 @@ const Servicedetails = () => {
         .then(data=>setService(data))
     },[serviceId])
     return (
-        <div className="mx-auto">
+        <div className="mx-auto mt-5">
             
-            <Card className="w-50 mx-auto">
+            <Card className="mx-auto service-details">
             <Card.Body>
                 <Card.Title>{service.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{service.subtitle}</Card.Subtitle>

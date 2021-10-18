@@ -3,7 +3,7 @@ import './About.css'
 
 const About = () => {
     return (
-        <div className="p-5">
+        <div className="p-5 about">
             <h2 className="text-primary">About Us</h2>
             <p><strong>Nazim's Health Cure Ltd</strong> Is a sister concern of Healthcare Pharmaceuticals Limited, one of the largest pharmaceutical companies in the country which is famous for its consistent quality, conformance's with the international standards and ethical practices throughout all its processes.</p>
 

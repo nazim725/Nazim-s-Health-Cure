@@ -1,0 +1,28 @@
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.footer-container p{
+    text-align: justify;
+}
+
+.footer-navigation .footer-link{
+    text-decoration: none;
+    display: block;
+}
+
+@media screen  and (max-width:768px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5pxpx;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    
+}
