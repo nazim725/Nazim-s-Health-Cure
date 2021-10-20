@@ -8,7 +8,8 @@
     border-radius: 15px;
     border: 5px solid gray;
 }
-
+.ambulance-info{
+}
 @media screen and (max-width:768px) {
     .ambulance{
        
@@ -20,6 +21,9 @@
         height: 250px;
         border-radius: 15px;
         border: 5px solid gray;
+    }
+    .ambulance-info{
+        margin-top: 20px;
     }
 
     

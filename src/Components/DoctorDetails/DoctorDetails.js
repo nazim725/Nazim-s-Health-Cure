@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import './DoctorDetails.css'
 
 const DoctorDetails = () => {
@@ -26,8 +27,7 @@ const DoctorDetails = () => {
                     <p>Address:{doctor.address}</p>
                     <p>{doctor.description}</p>
                     <p>Consultation Fee: ${doctor.fee}</p>
-
-                    <button className='btn btn-success'>Appoint {doctor.name}</button>
+                    <Link to={`/appointDoctor/${doctor.id}`}><button className='btn btn-success'>Appoint {doctor.name}</button></Link>
 
                 </div>
             </div>

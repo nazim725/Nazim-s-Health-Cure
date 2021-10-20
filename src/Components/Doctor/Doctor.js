@@ -10,7 +10,7 @@ const Doctor = (props) => {
             <Row xs={1} md={2} className="g-4">
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
-                    <Card className="doctor-card">
+                    <Card className="doctor-card border-0">
                         <Card.Img className="doctor-img" variant="top" src={img} />
                         <Card.Body>
                         <Card.Title>{name}</Card.Title>

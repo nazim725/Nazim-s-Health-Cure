@@ -16,6 +16,10 @@ import Footer from './Components/Footer/Footer';
 import Ambulance from './Components/Ambulance/Ambulance';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import NotFound from './Components/NotFound/NotFound';
+import LogoutModal from './Components/Logout/Logout';
+import BookingAmbulance from './Components/BookingAmbulance/BookingAmbulance';
+import AppointDoctor from './Components/AppointDoctors/AppointDoctor';
+import BookingService from './Components/BookingServices/BookingService';
 
 
 function App() {
@@ -38,6 +42,9 @@ function App() {
           <PrivateRoute path='/serviceDetails/:serviceId'>
             <Servicedetails></Servicedetails>
           </PrivateRoute>
+          <Route path='/bookingServices/:serviceId'>
+            <BookingService></BookingService>
+          </Route>
 
           <Route path='/doctors'>
             <Doctors></Doctors>
@@ -46,6 +53,9 @@ function App() {
           <PrivateRoute path='/doctorDetails/:doctorId'>
             <DoctorDetails></DoctorDetails>
           </PrivateRoute>
+          <Route path='/appointDoctor/:doctorId'>
+            <AppointDoctor></AppointDoctor>
+          </Route>
 
           <Route path='/about'>
             <About></About>
@@ -61,6 +71,14 @@ function App() {
           <Route path='/ambulance'>
             <Ambulance></Ambulance>
           </Route>
+          <Route path='/logout'>
+            <LogoutModal></LogoutModal>
+          </Route>
+
+          <PrivateRoute path='/bookingAmbulance/:ambulanceId'>
+            <BookingAmbulance></BookingAmbulance>
+          </PrivateRoute>
+        
 
           <Router path='*'>
             <NotFound></NotFound>

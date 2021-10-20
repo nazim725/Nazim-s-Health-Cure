@@ -1,12 +1,25 @@
 import React from 'react';
 import './Header.css'
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
 import { HashLink } from 'react-router-hash-link';
+import { useState } from 'react';
+import { render } from 'react-dom';
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  
+
+   
+
+  
+
+
   const {user,logout}=useAuth()
     return (
         <div>
@@ -23,12 +36,15 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/about#about">About Us</Nav.Link>
             {
               user?.email?
-              <button onClick={logout} className="btn btn-secondary me-2">Logout</button>
+            
+             <Link to='/logout'><Button variant="primary" onClick={handleShow}>
+             Logout
+            </Button></Link>
               :
               <Nav.Link as={Link} to="/login">Login</Nav.Link>
             }
             
-            <Navbar.Text>
+            <Navbar.Text className='ms-2'>
                 Signed in as:{user.email &&  <a className='ms-3' href="">{user?.displayName}</a>}
             </Navbar.Text>
             
@@ -51,3 +67,5 @@ const Header = () => {
 };
 
 export default Header;
+
+  // <Link to='/logout'><button onClick={logout} className="btn btn-secondary me-2">Logout</button></Link>

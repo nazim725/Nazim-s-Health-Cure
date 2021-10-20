@@ -6,21 +6,22 @@ import { useHistory, useLocation } from "react-router-dom";
 
 
 const Login = () => {
-    const { handleLogin, handleEmailChange, handlePasswordChange, signInUsingGoogle, error } = useAuth()
+    const {setError,setUser, handleLogin, handleEmailChange, handlePasswordChange, signInUsingGoogle, error } = useAuth()
 
     const history = useHistory();
     const location = useLocation()
     const redirect = location.state?.from || '/home'
 
     const handleGoogleLogin = () => {
-        signInUsingGoogle()
-            .then((result) => {
+        signInUsingGoogle().then((result) => {
                 const user = result.user;
                 console.log(user)
                 history.push(redirect)
             })
 
     }
+    
+    
 
     return (
         <div className="mx-5">
@@ -41,7 +42,7 @@ const Login = () => {
                 </Form.Group>
 
                 <div className="mb-3 text-danger" >{error}</div>
-                <Button variant="primary" type="submit">
+                <Button  variant="primary" type="submit">
                     Login
                 </Button>
                 <br />

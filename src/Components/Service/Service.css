@@ -1,13 +1,15 @@
 .service-card{
     width: 300px;
     height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
 }
 .service-img{
     width: 300px;
     height: 300px;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:765px){
     .service-card{
         width: 360px;
         height: 450px;
@@ -17,4 +19,16 @@
         height: 300px;
     }
     
+}
+
+@media screen and (min-width:766px) and (max-width:1025px){
+
+    .service-card{
+        width: 330px;
+        height: 450px;
+    }
+    .service-img{
+        width: 300px;
+        height: 300px;
+    }
 }

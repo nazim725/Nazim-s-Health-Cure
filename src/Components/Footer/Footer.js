@@ -14,7 +14,7 @@ const Footer = () => {
                     <h3 className="text-white">CONTACT INFO</h3>
                     <p className="text-white"> <i class="fas fa-map-marker-alt"></i> 23/2, Khilji Road, Block-B,
                         Shyamoli, Dhaka-1207</p>
-                    <p className="text-white"> <i class="far fa-envelope"></i>  info@hdclbd.com</p>
+                    <p className="text-white"> <i class="far fa-envelope"></i>  info@Nazim_Health_Cure.com</p>
                     <p className="text-white"> <i class="fas fa-phone-alt"></i> 10662</p>
                 </div>
 

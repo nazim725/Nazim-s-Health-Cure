@@ -124,7 +124,7 @@ const useFirebase=()=>{
 
 
     return {
-        user,error,isLoading,handleRegistration,handleEmailChange,handlePasswordChange,handleLogin,logout,signInUsingGoogle
+        user,setUser,setError,error,isLoading,handleRegistration,handleEmailChange,handlePasswordChange,handleLogin,logout,signInUsingGoogle
     }
 }
 

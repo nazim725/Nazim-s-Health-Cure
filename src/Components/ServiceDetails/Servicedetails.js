@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import './ServiceDetails.css'
 
 const Servicedetails = () => {
@@ -27,7 +28,7 @@ const Servicedetails = () => {
                    service.description
                }</p>
                 </Card.Text>
-              <button className="btn btn-primary">Place Order</button>
+             <Link to={`/bookingServices/${service.id}`}> <button className="btn btn-primary">Place Order</button></Link>
             </Card.Body>
             </Card>
             

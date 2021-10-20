@@ -1,0 +1,24 @@
+.notFound-img{
+   
+    margin-left: 250px;
+   
+}
+.notFound-img img{
+    width: 600px;
+    border: 5px solid lightgray;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:768px) {
+    .notFound-img img{
+        width: 330px;
+        border: 5px solid lightgray;
+        border-radius: 15px;
+    }
+    .notFound-img{
+   
+        margin-left: 15px;
+       
+    }
+    
+}
