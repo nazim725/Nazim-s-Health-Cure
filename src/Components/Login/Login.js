@@ -6,7 +6,7 @@ import { useHistory, useLocation } from "react-router-dom";
 
 
 const Login = () => {
-    const {setError,setUser, handleLogin, handleEmailChange, handlePasswordChange, signInUsingGoogle, error } = useAuth()
+    const {setError,setUser, handleLogin, handleEmailChange, handlePasswordChange, signInUsingGoogle, error,resetPassword } = useAuth()
 
     const history = useHistory();
     const location = useLocation()
@@ -20,6 +20,19 @@ const Login = () => {
             })
 
     }
+
+    // const handleEmailLogin=()=>{
+    //     handleLogin()
+    //     .then(result=>{
+    //         const user=result.user;
+    //         console.log(user)
+    //         history.push(redirect)
+    //         setError('')
+    //       })
+    //       .catch(error=>{
+    //         setError(error.message)
+    //       })
+    // }
     
     
 
@@ -52,6 +65,8 @@ const Login = () => {
             </Form>
 
             <p>New to Nazim's Health Cure? <Link className='text-decoration-none' to='/register'>Create Account</Link></p>
+            <p>Forgot password?</p>
+            <button className='btn btn-warning' onClick={resetPassword}>Reset Password Via Email</button>
 
 
         </div>

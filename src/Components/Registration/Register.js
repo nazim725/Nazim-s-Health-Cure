@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
@@ -6,7 +6,8 @@ import useFirebase from '../../hooks/useFirebase';
 
 
 const Register = () => {
-    const {handleRegistration,handleEmailChange,handlePasswordChange,handleGoogleSignIn,error}=useAuth()
+    const {user,handleRegistration,handleEmailChange,handlePasswordChange,handleGoogleSignIn,error}=useAuth()
+    const [isLoad,setIslOad]=useState(true)
     return (
        
             <div className="mx-5">
@@ -26,13 +27,17 @@ const Register = () => {
                 </Form.Group>
                
                 <div className="mb-3 text-danger" >{error}</div>
+                {
+                    user.email &&  <div className="mb-3 text-warning" >A verification email has been sent to your email </div>
+                    
+                }
                 <Button variant="primary" type="submit">
                    Create Account
                 </Button>
                 <br />
               
 
-                <Button className="mt-3 mx-auto" onClick={handleGoogleSignIn}>Google Sign In </Button>
+                <Button className="mt-3 mx-auto" onClick={handleGoogleSignIn}><i class="fab fa-google"></i>   Google Sign In </Button>
                 </Form>
 
                 <p>Already Have an Account?  <Link className='text-decoration-none' to='/login'>Please Login</Link></p>
